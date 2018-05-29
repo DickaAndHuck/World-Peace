@@ -1,0 +1,109 @@
+@CHARSET "UTF-8";
+#menu{
+	list-style-type:none;
+	width:600px;
+	font-size:20px;
+	font-weight:bold;
+
+}
+body {	
+		font-family:楷体;
+		background-image:url(D:/workspace_NSE/FirstJSF/WebContent/images/keda.jpg); 
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+		height:600px;
+		text-align: center;
+		z-index:-1; 
+		background-attachment:fixed;
+	}
+
+
+#div {	
+		
+		position:absolute; 
+		left:35%;
+		top:17%;
+		z-index:0;
+}
+
+
+.b{
+	
+	font-size:20px;
+	background-color:#9DB7CD;
+	word-spacing:5em;
+	margin-top:5px;
+	margin-right:20px;
+	margin-left:20px;
+}
+
+	
+}
+ .inputborder{
+				aligh:center;
+				border-width:2px;
+				border-style:solid;
+				width:150px;
+				height:20px; 
+				color:grey;
+			}
+#footer {	
+		position:absolute;
+		left:35%;
+		bottom:2%;
+		z-index:0;
+		text-decoration:blink;
+}
+
+form label{
+	
+	display:inline-block;
+	width:80px;
+	text-align:right;
+	
+	font-size:20px;
+	font-weight:bold;
+	} 
+		
+ul{
+	float:right;
+	width:100%;
+	padding:0;
+	margin:0;
+	list-style-type:none;
+	}	
+a{
+	float:left;
+	width:10em;
+	text-decoration:none;
+	color:white;
+	background-color:#00CED1;
+	padding:0.2em 0.6em;
+	border-right:1px solid white;
+	text-align:center;
+	}
+
+
+a:hover {background-color:#00CD66 }
+
+li {display:inline}
+
+#title{
+	
+	font-size:50px;
+	text-shadow: 5px 5px 3px #525252;
+	
+}
+marquee{
+	font-size:25px;
+	color:red;
+}
+
+
+
+
+
+
+
+
