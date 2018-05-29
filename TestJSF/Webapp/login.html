@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="resources/css/selectCourse.css" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>中南林选课系统</title>
+<script>
+/* 验证密码不为空  */
+function verifyForm(){
+	var m="hyq";
+	var n="h123";
+	var x=document.forms["myForm"]["ming"].value;
+	var y=document.forms["myForm"]["mi"].value;
+	if((x==null || x=="")||(y==null||y=="")){
+  	  		alert("用户名或密码不能为空!");
+  	  		return false;
+	}else if(x!==m||y!==n){
+  		alert("用户名或密码错误!");
+  		return false;
+  		}
+}
+function myFunction0(){
+		document.getElementById("footer").innerHTML=Date();
+}
+function myFunction1(){
+	document.getElementById("footer").innerHTML="中南林业科技大学 ©版权所有Copyright 2018 技术支持：大连********有限公司";
+}
+function myFunction2(x){
+	x.style.background="yellow";
+}
+function myFunction3(x){
+	x.style.background="#D3D3D3";
+}
+
+function dateFunction(){
+	var date1 = new Date()
+	date1.setFullYear(2018,5,1)
+	var date2=new Date();
+	var date3=date1-date2;
+	var days=Math.floor(date3/(24*3600*1000)); 
+	var y=date2.getFullYear();
+	var m=date2.getMonth();
+	var d=date2.getDate();
+	document.getElementById("rdate").innerHTML="今天是："+y+"年"+(m+1)+"月"+d+"日"+",距选课结束还有"+days+"天！";
+	
+}
+</script>
+
+</head>
+
+<body onload="dateFunction()">
+<marquee scrolldelay ="100"  id="rdate">水平滚动内容</marquee>
+<div>
+	<div id="hub" style="text-align:left;">
+		<ul id="menu">
+		
+		<li id="m"><a href="" title="学校主页">学校主页</a></li>
+		<li id="e"><a href="" title="新闻动态">新闻动态</a></li>
+		<li id="a"><a href="http://www.csuft.edu.cn/kyyj_385/kxyj1/201005/t20100514_10817.html" title="科学研究">科学研究</a></li>
+		<li id="b"><a href="" title="机构院系">机构院系</a></li>
+		<li id="n"><a href="" title="校内活动">校内活动</a></li>
+		<li id="u"><a href="" title="联系我们">联系我们</a></li>
+
+		</ul>
+	</div>
+</div>
+<hr/>
+<div>
+	<div id="div">
+	<img src=" images/hui.jpg" width="450" height="150" alt="无法显示图片"/>
+	<p id="title">教务管理系统</p>
+	<form method="post"  name="myForm" action="select.html" onsubmit="return verifyForm()" >
+		<label id="username" >用户名:</label>
+			<input onfocus="myFunction2(this)" onBlur="myFunction3(this)" style="background-color:#D3D3D3" type="text" name="ming" value="" class="inputborder" >
+			<br><br>
+		<label id="password"  >密码:</label>
+			<input onfocus="myFunction2(this)"onBlur="myFunction3(this)" style="background-color:#D3D3D3" type="password" id="mi" value="" class="inputborder" >
+			<br><br>
+		<button onmouseover="style.backgroundColor='#4DB7CD'" onmouseout="style.backgroundColor='#9DB7CD'" type="submit" name="submit" value="登陆" class="b" >登陆</button>
+		<button onmouseover="style.backgroundColor='#4DB7CD'" onmouseout="style.backgroundColor='#9DB7CD'"type="reset" name="reset" value="取消" class="b">取消</button>
+	</form>
+	</div>
+	
+	<div>
+	<p id="footer" onmouseover="myFunction0()" onmouseout="myFunction1()">中南林业科技大学 ©版权所有Copyright 2018 技术支持：大连********有限公司</p>
+	</div>
+</div>
+<p>测试内容</p>
+</body>
+</html>
